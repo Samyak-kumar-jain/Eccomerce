@@ -2,22 +2,22 @@ import React, { useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'  // Import Navigate
 import Auth from './Components/auth/Auth'
 import Login from './Pages/auth/Login'
-import Register from './Pages/auth/Register'
-import Admin from './Components/Admin/Admin'
-import Orders from './Pages/Admin/Orders'
-import Products from './Pages/Admin/Products'
-import Features from './Pages/Admin/Features'
-import Dashboard from './Pages/Admin/Dashboard'
-import Shopping from './Components/Shopping/Shopping'
+import Register from './Pages/auth/Register.jsx'
+import Admin from './Components/Admin/Admin.jsx'
+import Orders from './Pages/Admin/Orders.jsx'
+import Products from './Pages/Admin/Products.jsx'
+import Features from './Pages/Admin/Features.jsx'
+import Dashboard from './Pages/Admin/Dashboard.jsx'
+import Shopping from './Components/Shopping/Shopping.jsx'
 
-import CheckAuth from './Components/Common/Checkauth'
+import CheckAuth from './Components/Common/Checkauth.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import { checkAuth } from './features/Authslice/authslice'
 import { ToastContainer} from 'react-toastify'; // Import Toastify
-import Home from "./Pages/Shopping/home"
-import Listing from './Pages/Shopping/Listing'
-import Account from './Pages/Shopping/Account'
-import Checkout from './Pages/Shopping/Checkout'
+import Home from "./Pages/Shopping/Home.jsx"
+import Listing from './Pages/Shopping/Listing.jsx'
+import Account from './Pages/Shopping/Account.jsx'
+import Checkout from './Pages/Shopping/Checkout.jsx'
 
 
 const App = () => {
