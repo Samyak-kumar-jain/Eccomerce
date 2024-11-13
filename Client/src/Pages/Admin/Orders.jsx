@@ -1,4 +1,4 @@
-import AdminOrders from '@/Components/Admin/Orders'
+import AdminOrders from '../../Components/Admin/Orders'
 import React from 'react'
 
 const Orders = () => {

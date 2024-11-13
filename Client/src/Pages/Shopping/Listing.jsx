@@ -1,12 +1,12 @@
-import Filter from '@/Components/Shopping/filter';
+import Filter from '../../Components/Shopping/filter.jsx';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from '@/Components/ui/dropdown-menu';
 import { ArrowUpDownIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import ShopCard from '../../Components/Shopping/Shopcard';
+import ShopCard from '../../Components/Shopping/Shopcard.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-import { setProductDetails, fetchAllFilteredProducts, fetchProductDetails } from '@/features/Shopslice/Shopslice';
+import { setProductDetails, fetchAllFilteredProducts, fetchProductDetails } from '../../features/Shopslice/Shopslice.js';
 import { createSearchParams, useSearchParams } from 'react-router-dom';
-import ProductDetailsCard from '@/Components/Shopping/Product-details.jsx';
+import ProductDetailsCard from '../../Components/Shopping/Product-details.jsx';
 
 const Listing = () => {
   const dispatch = useDispatch();

@@ -5,8 +5,8 @@ import banner3 from "../../assets/banner-3.webp";
 import { BabyIcon, ChevronLeftIcon, ChevronRightIcon, CloudLightningIcon, FootprintsIcon, ShirtIcon, WatchIcon } from 'lucide-react';
 import { Card, CardContent } from '@/Components/ui/card';
 import { useDispatch, useSelector } from 'react-redux';
-import ShopCard from '@/Components/Shopping/Shopcard.jsx';
-import { fetchAllFilteredProducts } from '@/features/Shopslice/Shopslice';
+import ShopCard from '../../Components/Shopping/Shopcard.jsx';
+import { fetchAllFilteredProducts } from '../../features/Shopslice/Shopslice';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {

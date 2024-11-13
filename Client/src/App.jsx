@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'  // Import Navigate
-import Auth from './Components/auth/Auth'
-import Login from './Pages/auth/Login'
+import Auth from './Components/auth/Auth.jsx'
+import Login from './Pages/auth/Login.jsx'
 import Register from './Pages/auth/Register.jsx'
 import Admin from './Components/Admin/Admin.jsx'
 import Orders from './Pages/Admin/Orders.jsx'
@@ -12,7 +12,7 @@ import Shopping from './Components/Shopping/Shopping.jsx'
 
 import CheckAuth from './Components/Common/Checkauth.jsx'
 import { useDispatch, useSelector } from 'react-redux'
-import { checkAuth } from './features/Authslice/authslice'
+import { checkAuth } from './features/Authslice/authslice.js'
 import { ToastContainer} from 'react-toastify'; // Import Toastify
 import Home from "./Pages/Shopping/Home.jsx"
 import Listing from './Pages/Shopping/Listing.jsx'

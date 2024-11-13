@@ -1,8 +1,8 @@
 import React from 'react';
 import { AlignJustify, LogOut } from 'lucide-react';
 import { useDispatch } from 'react-redux';
-import { toggleAdmin } from '@/features/Sidebarslice/Sidebarslice';
-import { logoutnUser, logoutUser } from '@/features/Authslice/authslice';
+import { toggleAdmin } from '../../features/Sidebarslice/Sidebarslice.js';
+import { logoutnUser, logoutUser } from '../../features/Authslice/authslice.js';
 
 const Header = () => {
   

@@ -1,4 +1,4 @@
-import { deleteCartItem, updateCartQuantity } from '@/features/CartSlice/Cartslice';
+import { deleteCartItem, updateCartQuantity } from '../../features/CartSlice/Cartslice.js';
 import { Minus, Plus, Trash } from 'lucide-react'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'

@@ -1,4 +1,4 @@
-import { deleteProduct, fetchAllProducts } from '@/features/Product/Productslice';
+import { deleteProduct, fetchAllProducts } from '../../features/Product/Productslice.js';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 

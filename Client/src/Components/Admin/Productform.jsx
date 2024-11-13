@@ -4,7 +4,7 @@ import ImageUpload from './ImageUpload.jsx';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-import { addNewProduct, editProduct, fetchAllProducts } from '@/features/Product/Productslice';
+import { addNewProduct, editProduct, fetchAllProducts } from '../../features/Product/Productslice.js';
 
 const ProductForm = ({ onClose, isEditMode, currentEditId, setcurrentEditId, setFormVisible }) => {
   const [imageFile, setImageFile] = useState(null);

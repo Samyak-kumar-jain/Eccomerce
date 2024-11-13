@@ -2,7 +2,7 @@ import React from 'react';
 import { LayoutDashboard, Package, ShoppingCart, LogOut, ChartNoAxesCombined, Menu } from 'lucide-react'; 
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleAdmin } from '@/features/Sidebarslice/Sidebarslice';
+import { toggleAdmin } from '../../features/Sidebarslice/Sidebarslice.js';
 
 const Sidebar = ({ children }) => {
   const dispatch = useDispatch();

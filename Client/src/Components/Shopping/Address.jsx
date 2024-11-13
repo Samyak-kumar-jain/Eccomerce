@@ -1,4 +1,4 @@
-import { addNewAddress, fetchAllAddresses,deleteAddress, editaAddress } from "@/features/Shopslice/Addressslice";
+import { addNewAddress, fetchAllAddresses,deleteAddress, editaAddress } from "../../features/Shopslice/Addressslice.js";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AddressCard from "./AddressCard.jsx";
