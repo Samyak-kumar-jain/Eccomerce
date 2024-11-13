@@ -10,14 +10,14 @@ import Features from './Pages/Admin/Features'
 import Dashboard from './Pages/Admin/Dashboard'
 import Shopping from './Components/Shopping/Shopping'
 
-import Account from './Pages/Shopping/account'
-import Checkout from './Pages/Shopping/checkout'
 import CheckAuth from './Components/Common/Checkauth'
 import { useDispatch, useSelector } from 'react-redux'
 import { checkAuth } from './features/Authslice/authslice'
 import { ToastContainer} from 'react-toastify'; // Import Toastify
 import Home from "./Pages/Shopping/home"
-import Listing from './Pages/Shopping/listing'
+import Listing from './Pages/Shopping/Listing'
+import Account from './Pages/Shopping/Account'
+import Checkout from './Pages/Shopping/Checkout'
 
 
 const App = () => {
@@ -64,8 +64,8 @@ const App = () => {
             <CheckAuth isAuthenticated={isAuthenticated} user={user}><Shopping /></CheckAuth>}>
             <Route path="home" element={<Home/>} />
             <Route path="listing" element={<Listing/>} />
-            <Route path="account" element={<Account />} />
-            <Route path="checkout" element={<Checkout />} />
+            <Route path="account" element={<Account/>} />
+            <Route path="checkout" element={<Checkout/>} />
           </Route>
         </Routes>
       </div>
