@@ -1,7 +1,7 @@
 import { UploadCloudIcon } from 'lucide-react';
 import React, { useEffect, useRef } from 'react';
 import { Trash2 } from 'lucide-react';
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from "../../Components/ui/skeleton.jsx"
 
 const ImageUpload = ({ isEditMode, imageFile, setImageFile, uploadImgUrl, setImgUploadUrl, setImageLoadingState, imagLoadingState }) => {
     const inputRef = useRef(null);

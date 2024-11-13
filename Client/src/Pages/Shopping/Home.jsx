@@ -3,10 +3,10 @@ import banner1 from "../../assets/banner-1.webp";
 import banner2 from "../../assets/banner-2.webp";
 import banner3 from "../../assets/banner-3.webp";
 import { BabyIcon, ChevronLeftIcon, ChevronRightIcon, CloudLightningIcon, FootprintsIcon, ShirtIcon, WatchIcon } from 'lucide-react';
-import { Card, CardContent } from '@/Components/ui/card';
+import { Card, CardContent } from '../../Components/ui/card.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import ShopCard from '../../Components/Shopping/Shopcard.jsx';
-import { fetchAllFilteredProducts } from '../../features/Shopslice/Shopslice';
+import { fetchAllFilteredProducts } from '../../features/Shopslice/Shopslice.js';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {

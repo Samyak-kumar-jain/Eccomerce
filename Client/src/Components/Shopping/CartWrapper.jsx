@@ -1,5 +1,5 @@
 import React from 'react';
-import { SheetContent, SheetHeader, SheetTitle } from '../ui/sheet';
+import { SheetContent, SheetHeader, SheetTitle } from '../ui/sheet.jsx';
 import CartContent from './CartContent.jsx';
 import { useNavigate } from 'react-router-dom';
 

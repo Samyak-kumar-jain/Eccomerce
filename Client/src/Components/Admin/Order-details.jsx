@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { DialogContent } from '../ui/dialog';
-import { Label } from '../ui/label';
-import { Separator } from '../ui/separator';
+import { DialogContent } from '../ui/dialog.jsx';
+import { Label } from '../ui/label.jsx';
+import { Separator } from '../ui/separator.jsx';
 
 const Order_details = () => {
     const [orderStatus, setOrderStatus] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Dialog, DialogContent, DialogTitle } from '../ui/dialog'
-import { Separator } from '../ui/separator';
-import { Avatar, AvatarFallback } from '../ui/avatar';
+import { Dialog, DialogContent, DialogTitle } from '../ui/dialog.jsx'
+import { Separator } from '../ui/separator.jsx';
+import { Avatar, AvatarFallback } from '../ui/avatar.jsx';
 import { StarIcon } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProductDetails } from '../../features/Shopslice/Shopslice.js';

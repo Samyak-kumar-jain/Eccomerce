@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import authReducer from '@/features/Authslice/authslice'
-import SidebarReducer from '@/features/Sidebarslice/Sidebarslice';
-import adminProductsReducer from "../features/Product/Productslice"
-import shopProductReducer from "../features/Shopslice/Shopslice"
-import shoppingCartReducer from "../features/CartSlice/Cartslice"
-import AddressReducer from "../features/Shopslice/Addressslice"
-import reviewReducer from "../features/ReviewSlice/reviewSlice"
+import authReducer from '../features/Authslice/authslice.js'
+import SidebarReducer from '../features/Sidebarslice/Sidebarslice.js';
+import adminProductsReducer from "../features/Product/Productslice.js"
+import shopProductReducer from "../features/Shopslice/Shopslice.js"
+import shoppingCartReducer from "../features/CartSlice/Cartslice.js"
+import AddressReducer from "../features/Shopslice/Addressslice.js"
+import reviewReducer from "../features/ReviewSlice/reviewSlice.js"
 
 
 const store =  configureStore({

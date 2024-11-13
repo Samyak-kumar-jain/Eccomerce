@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table'
-import { Dialog } from '../ui/dialog'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.jsx'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table.jsx'
+import { Dialog } from '../ui/dialog.jsx'
 import Shop_Order_details from './Shop_Order_details.jsx'
 
 const Orders = () => {

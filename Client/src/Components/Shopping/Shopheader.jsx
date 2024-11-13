@@ -2,10 +2,10 @@ import { HousePlug, LogOut, Menu, ShoppingCartIcon, UserCog, X } from 'lucide-re
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu';
-import { Avatar, AvatarFallback } from '../ui/avatar';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu.jsx';
+import { Avatar, AvatarFallback } from '../ui/avatar.jsx';
 import { logoutnUser } from '../../features/Authslice/authslice.js';
-import { Sheet } from '../ui/sheet';
+import { Sheet } from '../ui/sheet.jsx';
 import CartWrapper from './CartWrapper.jsx';
 import { BallTriangle } from 'react-loader-spinner';
 import { fetchCartItems } from '../../features/CartSlice/Cartslice.js';

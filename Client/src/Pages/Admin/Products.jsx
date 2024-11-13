@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import ProductForm from '../../Components/Admin/Productform.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllProducts } from "../../features/Product/Productslice";
+import { fetchAllProducts } from "../../features/Product/Productslice.js";
 import Product_card from '../../Components/Admin/Product_card.jsx';
 
 const Products = () => {

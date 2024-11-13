@@ -1,5 +1,5 @@
 import Filter from '../../Components/Shopping/filter.jsx';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from '@/Components/ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from '../../Components/ui/dropdown-menu.jsx';
 import { ArrowUpDownIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import ShopCard from '../../Components/Shopping/Shopcard.jsx';

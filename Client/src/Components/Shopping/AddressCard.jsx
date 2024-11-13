@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardFooter } from '../ui/card';
-import { Label } from '../ui/label';
+import { Card, CardContent, CardFooter } from '../ui/card.jsx';
+import { Label } from '../ui/label.jsx';
 import { Edit2Icon, Trash2 } from 'lucide-react';
 
 const AddressCard = ({ addressinfo,handleDeleteAddress,handleEditAddress }) => {
