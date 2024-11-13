@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { Dialog } from '../ui/dialog'
-import Order_details from './Order-details'
+import Order_details from './Order-details.jsx'
 
 const AdminOrders = () => {
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table'
 import { Dialog } from '../ui/dialog'
-import Shop_Order_details from './Shop_Order_details'
+import Shop_Order_details from './Shop_Order_details.jsx'
 
 const Orders = () => {
   const [openDialog,setOpenDialog] = useState(false)

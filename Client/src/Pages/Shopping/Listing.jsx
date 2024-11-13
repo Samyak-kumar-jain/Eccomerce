@@ -6,7 +6,7 @@ import ShopCard from '../../Components/Shopping/Shopcard';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProductDetails, fetchAllFilteredProducts, fetchProductDetails } from '@/features/Shopslice/Shopslice';
 import { createSearchParams, useSearchParams } from 'react-router-dom';
-import ProductDetailsCard from '@/Components/Shopping/Product-details';
+import ProductDetailsCard from '@/Components/Shopping/Product-details.jsx';
 
 const Listing = () => {
   const dispatch = useDispatch();

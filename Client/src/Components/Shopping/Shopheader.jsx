@@ -6,7 +6,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Avatar, AvatarFallback } from '../ui/avatar';
 import { logoutnUser } from '@/features/Authslice/authslice';
 import { Sheet } from '../ui/sheet';
-import CartWrapper from './CartWrapper';
+import CartWrapper from './CartWrapper.jsx';
 import { BallTriangle } from 'react-loader-spinner';
 import { fetchCartItems } from '@/features/CartSlice/Cartslice';
 

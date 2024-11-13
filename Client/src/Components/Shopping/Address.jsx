@@ -1,7 +1,7 @@
 import { addNewAddress, fetchAllAddresses,deleteAddress, editaAddress } from "@/features/Shopslice/Addressslice";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import AddressCard from "./AddressCard";
+import AddressCard from "./AddressCard.jsx";
 
 export const AddressForm = () => {
   const [formData, setFormData] = useState({

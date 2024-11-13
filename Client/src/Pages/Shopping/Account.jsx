@@ -1,7 +1,7 @@
 import React from 'react'
 import accountImg from "../../assets/account.jpg"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/Components/ui/tabs'
-import Orders from '@/Components/Shopping/Orders'
+import Orders from '@/Components/Shopping/Orders.jsx'
 import { AddressForm } from '@/Components/Shopping/Address'
 
 const Account = () => {

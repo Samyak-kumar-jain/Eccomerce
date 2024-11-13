@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback } from '../ui/avatar';
 import { StarIcon } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProductDetails } from '@/features/Shopslice/Shopslice';
-import Star from '../Common/star';
+import Star from '../Common/star.jsx';
 import { addReview } from '@/features/ReviewSlice/reviewSlice';
 
 // Optionally use a visually hidden component for accessibility

@@ -1,8 +1,8 @@
 import React from 'react';
 import image from '../../assets/account.jpg';
-import { AddressForm } from '../../Components/Shopping/Address';
+import { AddressForm } from '../../Components/Shopping/Address.jsx';
 import { useSelector } from 'react-redux';
-import CartContent from '@/Components/Shopping/CartContent';
+import CartContent from '@/Components/Shopping/CartContent.jsx';
 
 const Checkout = () => {
   const { cartItems } = useSelector((state) => state.shoppingCart);
