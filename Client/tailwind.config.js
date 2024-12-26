@@ -58,5 +58,7 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssAnimate()],
+  plugins: [
+    tailwindcssAnimate, // Ensure the plugin is added directly, not invoked as a function.
+  ],
 };
