@@ -1,14 +1,15 @@
 import { registerUser } from '../../features/Authslice/authslice.js';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify'; // Import Toastify
-import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function RegisterForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', password: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', password: '', role: 'user' });
   const [errors, setErrors] = useState({ email: '', password: '' });
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,55 +35,55 @@ function RegisterForm() {
     let valid = true;
 
     if (!validateEmail(formData.email)) {
-        setErrors((prevErrors) => ({
-            ...prevErrors,
-            email: 'Please enter a valid email address.',
-        }));
-        valid = false;
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: 'Please enter a valid email address.',
+      }));
+      valid = false;
     } else {
-        setErrors((prevErrors) => ({ ...prevErrors, email: '' }));
+      setErrors((prevErrors) => ({ ...prevErrors, email: '' }));
     }
 
     if (!validatePassword(formData.password)) {
-        setErrors((prevErrors) => ({
-            ...prevErrors,
-            password: 'Password must be at least 8 characters long and include at least 1 letter and 1 number.',
-        }));
-        valid = false;
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: 'Password must be at least 8 characters long and include at least 1 letter and 1 number.',
+      }));
+      valid = false;
     } else {
-        setErrors((prevErrors) => ({ ...prevErrors, password: '' }));
+      setErrors((prevErrors) => ({ ...prevErrors, password: '' }));
     }
 
     if (valid) {
-      
-        dispatch(registerUser(formData))
-            .unwrap() // Use unwrap to get the response directly
-            .then((response) => {
-                toast.success('Registration successful!', {
-                    position: 'top-center',
-                    autoClose: 3000,
-                });
-                setFormData({ name: '', email: '', password: '' });
-            })
-            .catch((error) => {
-              if (error.response && error.response.status === 400) {
-                  toast.error('User already exists. Please try a different username or email.', {
-                      position: 'top-center',
-                      autoClose: 3000,
-                  });
-              } else {
-                  toast.error('Registration failed. Please try again.', {
-                      position: 'top-center',
-                      autoClose: 3000,
-                  });
-              }
+      dispatch(registerUser(formData))
+        .unwrap()
+        .then(() => {
+          toast.success('Registration successful!', {
+            position: 'top-center',
+            autoClose: 3000,
           });
+          setFormData({ name: '', email: '', password: '', role: 'user' });
+          navigate('/auth/login'); // Redirect to login page after successful registration
+        })
+        .catch((error) => {
+          if (error.response && error.response.status === 400) {
+            toast.error('User already exists. Please try a different username or email.', {
+              position: 'top-center',
+              autoClose: 3000,
+            });
+          } else {
+            toast.error('Registration failed. Please try again.', {
+              position: 'top-center',
+              autoClose: 3000,
+            });
+          }
+        });
     }
-};
+  };
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="space-y-6  rounded-md p-3 w-96">
+      <form onSubmit={handleSubmit} className="space-y-6 rounded-md p-3 w-96">
         <h2 className="text-3xl text-center font-bold text-gray-800">Sign up</h2>
         <div>
           <label className="block text-sm font-medium text-gray-700">Name</label>
@@ -122,6 +123,33 @@ function RegisterForm() {
           />
           {errors.password && <p className="text-black text-sm mt-1">{errors.password}</p>}
         </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Role</label>
+          <div className="mt-2">
+            <label className="inline-flex items-center">
+              <input
+                type="radio"
+                name="role"
+                value="user"
+                checked={formData.role === 'user'}
+                onChange={handleChange}
+                className="form-radio text-black cursor-pointer"
+              />
+              <span className="ml-2 text-gray-700">User</span>
+            </label>
+            <label className="inline-flex items-center ml-6">
+              <input
+                type="radio"
+                name="role"
+                value="admin"
+                checked={formData.role === 'admin'}
+                onChange={handleChange}
+                className="form-radio text-black cursor-pointer"
+              />
+              <span className="ml-2 text-gray-700">Admin</span>
+            </label>
+          </div>
+        </div>
         <button
           type="submit"
           className="w-full bg-black text-white py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
@@ -135,8 +163,6 @@ function RegisterForm() {
           </Link>
         </p>
       </form>
-
-      
     </div>
   );
 }

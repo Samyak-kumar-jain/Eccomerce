@@ -4,7 +4,7 @@ const User = require('../../Model/User');
 
 // Register User
 const registerUser = async (req, res) => {
-    const { name, password, email } = req.body;
+    const { name, password, email, role } = req.body; // Include role in the destructuring
 
     try {
         // Check if user already exists
@@ -18,10 +18,12 @@ const registerUser = async (req, res) => {
 
         const hashPassword = await bcrypt.hash(password, 10);
 
+        // Create a new user with the role included
         const newUser = new User({
             username: name,
             email,
             password: hashPassword,
+            role, // Save the role
         });
 
         await newUser.save();
@@ -31,13 +33,14 @@ const registerUser = async (req, res) => {
             message: "Registered successfully",
         });
     } catch (e) {
-        console.log(e);
+        console.error(e);
         res.status(500).json({
             success: false,
             message: "An error occurred during registration",
         });
     }
 };
+
 
 // Login User
 const loginUser = async (req, res) => {
